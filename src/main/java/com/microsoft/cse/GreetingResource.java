@@ -13,6 +13,8 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         Span.current().setAttribute("mycustomdimension", "myvalue1");
-        return "Hello RESTEasy";
+        String traceId = Span.current().getSpanContext().getTraceId();
+        String spanId = Span.current().getSpanContext().getSpanId();
+        return "Hello RESTEasy TraceId " + traceId + " SpanId " + spanId;
     }
 }

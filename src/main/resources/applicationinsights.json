@@ -1,0 +1,15 @@
+{
+	"connectionString": "",
+	"role": {
+    "name": "demo-api"
+  },
+	"selfDiagnostics": {
+		"destination": "file+console",
+		"level": "DEBUG",
+		"file": {
+			"path": "applicationinsights.log",
+			"maxSizeMb": 5,
+			"maxHistory": 1
+		}
+	}
+}
